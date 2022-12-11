@@ -1,6 +1,9 @@
+import collections
+
+
 class Solution:
     def groupAnagrams(self, strs: list[str]) -> list[list]:
-        res = []
+        res = collections.defaultdict(int)
         for s in strs:
             count = [0] * 26
             for c in s:
